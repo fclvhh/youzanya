@@ -71,6 +71,8 @@
 		    return this.goodsList[this.currentType].list
       }
     },
+    // 用created hook回调 , 让组件在创建完成后,就发送axois请求
+    // 拿到 数据
     created() {
       console.log('创建Home');
       // 1.请求多个数据
@@ -123,6 +125,7 @@
        */
       getMultiData() {
         getHomeMultidata().then(res => {
+          // data数据细分,用相应的分类,拿到data中去
           this.banners = res.data[BANNER].list
           this.recommends = res.data[RECOMMEND].list
           // 下次更新DOM时,获取新的tabOffsetTop值(不保险,可以在updated钩子中获取)
@@ -151,6 +154,7 @@
   }
 
   .nav-bar {
+    /* 让背景用预先设置好的颜色 */
     background-color: var(--color-tint);
     font-weight: 700;
     color: #fff;
