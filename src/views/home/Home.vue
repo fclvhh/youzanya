@@ -10,7 +10,6 @@
             :data="showGoodsList"
             :pull-up-load="true"
             :probe-type="3">
-      <div>
         <home-swiper :banners="banners"
                      ref="hSwiper"></home-swiper>
         <feature-view :features="recommends"></feature-view>
@@ -19,7 +18,6 @@
                      :titles="['流行', '新款', '精选']"
                      ref="tabControl"></tab-control>
         <goods-list :goods-list="showGoodsList"></goods-list>
-      </div>
     </scroll>
     <back-top @backTop="backTop" class="back-top" v-show="showBackTop">
       <img src="~assets/img/common/top.png" alt="">
@@ -149,7 +147,7 @@
 
 <style scoped>
   #home {
-    /*position: relative;*/
+    position: relative;
     height: 100vh;
   }
 

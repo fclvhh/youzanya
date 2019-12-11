@@ -35,7 +35,6 @@
   #tab-bar-item {
     flex: 1;
   }
-
   .item-icon img, .item-active-icon img {
     width: 24px;
     height: 24px;
