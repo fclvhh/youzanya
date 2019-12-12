@@ -66,6 +66,7 @@
 		    this.scroll && this.scroll.scrollTo && this.scroll.scrollTo(x, y, time)
       }
     },
+    // 用wacth监听,实现refresh的防抖动?!
     watch: {
 		  data() {
         setTimeout(this.refresh, 20)

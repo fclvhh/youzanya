@@ -137,7 +137,8 @@
           const goodsList = res.data.list;
           this.goodsList[type].list.push(...goodsList)
           this.goodsList[type].page += 1
-
+          // 完成了上拉加载更多 , finishPullUp是为了解决pullUp回调函数
+          // 只会被调用一次的问题
           this.$refs.scroll.finishPullUp()
         })
       }
@@ -157,7 +158,9 @@
     font-weight: 700;
     color: #fff;
   }
-
+/* 相当于给better-scroll的wrapper设置滚动区域 
+    他的唯一直接子元素可以在该区域进行滚动    
+*/
   .content {
     position: absolute;
     top: 44px;
