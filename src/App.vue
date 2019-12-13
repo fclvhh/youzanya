@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- Detail组件不会keep-alive , 会多次创建,多次执行create hook -->
     <keep-alive exclude="Detail">
       <router-view></router-view>
     </keep-alive>

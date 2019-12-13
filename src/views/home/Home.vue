@@ -81,6 +81,7 @@
       this.getHomeProducts(NEW)
       this.getHomeProducts(SELL)
     },
+    // 两个hook 是为了记录离开时的位置
     activated: function () {
       this.$refs.hSwiper.startTimer()
     },

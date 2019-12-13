@@ -31,10 +31,13 @@
 <style scoped>
   #user-info {
     background-color: var(--color-tint);
-    padding: 15px;
+    padding: 50px;
     margin-top: -5px;
+    position: relative;
   }
-
+  #user-info .clear-fix {
+    margin-top:20px;
+  }
   #user-info .privateImage-svg {
     width: 60px;
     height: 60px;

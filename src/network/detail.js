@@ -14,7 +14,8 @@ export function getRecommend() {
     url: '/recommend'
   })
 }
-
+// 详情页要用到多个json对象的部分数据 , 通过下面这种方式
+// 拿到多个对象 , 抽取到属性到一个类
 export class Goods {
   constructor(itemInfo, columns, services) {
     this.title = itemInfo.title;
